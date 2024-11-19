@@ -1,9 +1,17 @@
 public class Kafe01 {
-    public static void Menu(String namaPelanggan, boolean isMember) {
+    public static void Menu(String namaPelanggan, boolean isMember, String kodePromo) {
         System.out.println("Selamat datang, " + namaPelanggan + "!");
 
         if (isMember) {
             System.out.println("Anda adalah member, dapatkan diskon 10% untuk setiap pembelian!");
+        }
+
+        if (kodePromo.equals("DISKON30")) {
+            System.out.println("Selamat Anda mendapat diskon 30%");
+        } else if (kodePromo.equals("DISKON50")) {
+            System.out.println("Selamat Anda mendapat diskon 50%");
+        } else {
+            System.out.println("Tidak mendapat diskon");
         }
 
         System.out.println("=====MENU RESTO KAFE=====");
@@ -17,7 +25,7 @@ public class Kafe01 {
     }
 
     public static void main(String[] args) {
-        Menu("Andi", true);
+        Menu("Andi", true, "DISKON30");
     }
 
 }
